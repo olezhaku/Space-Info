@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import Apod from "./Pages/Apod/Apod";
 import Header from "./components/Header/Header";
@@ -26,7 +26,7 @@ const App: FC = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			<BrowserRouter>
+			<HashRouter>
 				<Header themeSwitch={themeSwitch} />
 
 				<Routes>
@@ -35,7 +35,7 @@ const App: FC = () => {
 				</Routes>
 
 				<Scroll />
-			</BrowserRouter>
+			</HashRouter>
 		</ThemeProvider>
 	);
 };
