@@ -8,7 +8,7 @@ import { Search, Clear } from "@mui/icons-material";
 import classes from "./Filter.module.sass";
 
 import { useAppSelector } from "../../hooks/useAppSelector";
-import { useAppDipatch } from "../../hooks/useAppDispatch";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
 import {
 	changeDateHandler,
 	changeStartDateHandler,
@@ -27,9 +27,8 @@ const Filter = () => {
 		count: false,
 	});
 
-	const values = useAppSelector((state) => state.apod.values);
-	const errors = useAppSelector((state) => state.apod.errors);
-	const dispatch = useAppDipatch();
+	const { values, errors } = useAppSelector((state) => state.apodFilter);
+	const dispatch = useAppDispatch();
 
 	useEffect(() => {
 		if (values.count) {

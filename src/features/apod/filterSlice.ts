@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IFormErrors, IFormValues } from "../../types/types";
 import { inputValidation } from "../../utils/inputValidation";
 
-interface ValuesState {
+interface FilterState {
 	values: IFormValues;
 	errors: IFormErrors;
 	send: IFormValues;
@@ -14,7 +14,7 @@ export const today = new Date()
 	.reverse()
 	.join("-");
 
-const initialState: ValuesState = {
+const initialState: FilterState = {
 	values: {
 		date: today,
 		startDate: "",
@@ -62,12 +62,7 @@ const filterSlice = createSlice({
 				!state.errors.startDate &&
 				!state.errors.endDate
 			) {
-				state.send = {
-					date: state.values.date,
-					startDate: state.values.startDate,
-					endDate: state.values.endDate,
-					count: state.values.count,
-				};
+				state.send = { ...state.values };
 			}
 		},
 		clearHandler(state) {

@@ -1,15 +1,14 @@
-import React, { FC } from "react";
+import React from "react";
 import errorImage from "../../img/error.jpg";
 
 import { Grid, Card, Typography, CardContent, CardMedia } from "@mui/material";
 
 import classes from "./Error.module.sass";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
-interface ErrorProps {
-	limit: number[] | string[];
-}
+const Error = () => {
+	const error = useAppSelector((state) => state.apod.error);
 
-const Error: FC<ErrorProps> = ({ limit }) => {
 	return (
 		<Card className={classes.container}>
 			<Grid container>
@@ -24,11 +23,11 @@ const Error: FC<ErrorProps> = ({ limit }) => {
 				<Grid item xs={12} md={6} lg={5}>
 					<CardContent>
 						<Typography gutterBottom variant="h5" component="div">
-							{limit[0]}
+							{error[0]}
 						</Typography>
 
 						<Typography variant="body2" color="text.secondary">
-							{limit[1]}
+							{error[1]}
 						</Typography>
 					</CardContent>
 				</Grid>

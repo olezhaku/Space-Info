@@ -6,9 +6,10 @@
 
 ## Стек технологий
 
-- React
-- TypeScript
-- MaterialUI
-- SASS
-- axios
-- React-Router
+-   React
+-   TypeScript
+-   MaterialUI
+-   SASS
+-   axios
+-   React-Router
+-   Redux-toolkit

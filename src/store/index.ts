@@ -1,7 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import filterReducer from "../features/apod/filterSlice";
+import filterSlice from "../features/apod/filterSlice";
+import apodSlice from "../features/apod/apodSlice";
 
-const rootReducer = combineReducers({ apod: filterReducer });
+const rootReducer = combineReducers({
+	apodFilter: filterSlice,
+	apod: apodSlice,
+});
 
 export const store = configureStore({ reducer: rootReducer });
 

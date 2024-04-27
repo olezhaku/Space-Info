@@ -3,7 +3,7 @@ import { IApod } from "../../types/types";
 
 import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
 
-import classes from "./ApodIrem.module.sass";
+import classes from "./ApodItem.module.sass";
 
 interface ApodItemProps {
 	apod: IApod;
