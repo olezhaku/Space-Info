@@ -16,15 +16,15 @@ export const fetchApod = createAsyncThunk(
 		if (send) {
 			if (send.count) {
 				filterValues = `count=${send.count}`;
-			} else if (send.date) {
-				filterValues = `date=${send.date}`;
 			} else if (send.startDate && !send.endDate) {
 				filterValues = `start_date=${send.startDate}`;
 			} else if (send.startDate && send.endDate) {
 				filterValues = `start_date=${send.startDate}&end_date=${send.endDate}`;
+			} else if (send.date) {
+				filterValues = `date=${send.date}`;
 			}
 		}
-
+		console.log(filterValues);
 		try {
 			const response = await axios.get<IApod[]>(
 				`https://api.nasa.gov/${link}api_key=${apiKey}&${filterValues}`

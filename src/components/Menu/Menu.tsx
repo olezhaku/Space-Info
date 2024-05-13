@@ -32,12 +32,14 @@ const Menu: FC<MenuProps> = ({ isOpen, closeHandler }) => {
 
 				<Divider />
 
-				<Link href="#" underline="none" color="inherit">
+				<Link href="/mrp" underline="none" color="inherit">
 					<ListItem>
-						<ListItemText primary="Coming soon"></ListItemText>
+						<ListItemText primary="Mars Rover Photos"></ListItemText>
 						<ListItemIcon />
 					</ListItem>
 				</Link>
+
+				<Divider />
 
 				<Divider />
 			</List>

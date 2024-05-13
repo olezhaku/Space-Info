@@ -9,6 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import "./styles/App.css";
+import Mrp from "./Pages/Mrp/Mrp";
 
 const App: FC = () => {
 	const [dark, setDark] = useState(false);
@@ -31,7 +32,8 @@ const App: FC = () => {
 
 				<Routes>
 					<Route path="/apod" element={<Apod />} />
-					<Route path="/" element={<Navigate to="/apod" />} />
+					<Route path="/mrp" element={<Mrp />} />
+					<Route path="/" element={<Apod />} />
 				</Routes>
 
 				<Scroll />
