@@ -23,7 +23,7 @@ const Menu: FC<MenuProps> = ({ isOpen, closeHandler }) => {
 			<Divider />
 
 			<List>
-				<Link href="/apod" underline="none" color="inherit">
+				<Link href="/space-info/apod" underline="none" color="inherit">
 					<ListItem>
 						<ListItemText primary="Astronomy Picture of the Day"></ListItemText>
 						<ListItemIcon />
@@ -32,7 +32,7 @@ const Menu: FC<MenuProps> = ({ isOpen, closeHandler }) => {
 
 				<Divider />
 
-				<Link href="/mrp" underline="none" color="inherit">
+				<Link href="/space-info/mrp" underline="none" color="inherit">
 					<ListItem>
 						<ListItemText primary="Mars Rover Photos"></ListItemText>
 						<ListItemIcon />
